@@ -19,6 +19,7 @@ public class ShareniuCommonJumpTaskCmd implements Command<Void> {
 	protected ActivityImpl desActivity;//目标节点
 	protected Map<String, Object> paramvar;//变量
 	protected ActivityImpl currentActivity;//当前的节点
+
 	public Void execute(CommandContext commandContext) {
 		// 获取当前流程的executionId，因为常规的流程执行id与流程实例id是相等的。
 		ExecutionEntityManager executionEntityManager = Context

@@ -56,6 +56,13 @@ public class App {
 	}
 
 	@Test
+	public void testShareniuCountersignAddCmd() throws IOException {
+
+		processEngine.getManagementService().executeCommand(
+				new ShareniuCountersignAddCmd("7513", "test"));
+	}
+
+	@Test
 	public void testShareniuParallelJumpTaskCmd() throws IOException {
 		ReadOnlyProcessDefinition processDefinitionEntity = (ReadOnlyProcessDefinition) repositoryService
 				.getProcessDefinition("parallel:1:4");
